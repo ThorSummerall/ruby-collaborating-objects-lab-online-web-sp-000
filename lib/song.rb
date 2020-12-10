@@ -19,7 +19,7 @@ class Song
   #Michael Jackson - Black or White - pop.mp3
   def self.new_by_filename(filename)
     song_artist = filename.split(" - ")[0]
-    song_title = filename.split(" - ")
+    song_title = filename.split(" - ")[1]
     self.new(song_title)
 
     new_song = self.all.find{|song_instance| song_instance.name == song_title}
