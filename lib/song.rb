@@ -23,10 +23,10 @@ class Song
     self.new(song_title)
 
     new_song = self.all.find{|song_instance| song_instance.name == song_title}
-    new_song.artist_name = song_artist 
+    new_song.artist_name = song_artist
     artist = Artist.find_or_create_by_name(song_artist)
-    artist.songs << new_song 
-    new_song 
+    artist.songs << new_song
+    new_song
   end
 
   def artist_name=(name)
