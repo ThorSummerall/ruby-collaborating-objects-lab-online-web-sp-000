@@ -18,7 +18,7 @@ class Song
 
   #Michael Jackson - Black or White - pop.mp3
   def self.new_by_filename(filename)
-    song_artist = file_name.split(" - ")[0]
+    song_artist = filename.split(" - ")[0]
     song_title = filename.split(" - ")
     self.new(song_title)
 
